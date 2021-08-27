@@ -1,12 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main(){
-	dataInput := []int{4, 1, 5, 8, 9, 3, 2, 6, 7}
-	fmt.Printf("Unsorted array: %d\n", dataInput)
-	fmt.Printf("Sorted array: %d\n", HeapSort(dataInput))
+	data := []int{7777,1000,  51, 200, -12, 9929, 1450, 1680,  44, 211}
+
+	fmt.Printf("Original data - %d\n",data)
+
+	result := HeapSort(data)
+
+	fmt.Printf("Sorted data - %d\n",result)
+
+
 }
+
 
 func HeapSort(data []int) []int {
 	heapify(data)
